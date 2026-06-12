@@ -20,16 +20,16 @@ export default function VendorCsvImportPage() {
           <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-slate-200 rounded-full z-0"></div>
           <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-indigo-600 rounded-full z-0 transition-all duration-500" style={{ width: step === 1 ? '0%' : step === 2 ? '50%' : '100%' }}></div>
           
-          <div className={\`relative z-10 flex flex-col items-center \${step >= 1 ? 'text-indigo-600' : 'text-slate-400'}\`}>
-            <div className={\`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm \${step >= 1 ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-slate-200 text-slate-500'}\`}>1</div>
+          <div className={`relative z-10 flex flex-col items-center ${step >= 1 ? 'text-indigo-600' : 'text-slate-400'}`}>
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${step >= 1 ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-slate-200 text-slate-500'}`}>1</div>
             <span className="text-xs font-semibold mt-2 uppercase tracking-wide">Upload File</span>
           </div>
-          <div className={\`relative z-10 flex flex-col items-center \${step >= 2 ? 'text-indigo-600' : 'text-slate-400'}\`}>
-            <div className={\`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm \${step >= 2 ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-white border-2 border-slate-200 text-slate-400'}\`}>2</div>
+          <div className={`relative z-10 flex flex-col items-center ${step >= 2 ? 'text-indigo-600' : 'text-slate-400'}`}>
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${step >= 2 ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-white border-2 border-slate-200 text-slate-400'}`}>2</div>
             <span className="text-xs font-semibold mt-2 uppercase tracking-wide">Map Columns</span>
           </div>
-          <div className={\`relative z-10 flex flex-col items-center \${step >= 3 ? 'text-indigo-600' : 'text-slate-400'}\`}>
-            <div className={\`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm \${step >= 3 ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-white border-2 border-slate-200 text-slate-400'}\`}>3</div>
+          <div className={`relative z-10 flex flex-col items-center ${step >= 3 ? 'text-indigo-600' : 'text-slate-400'}`}>
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${step >= 3 ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-white border-2 border-slate-200 text-slate-400'}`}>3</div>
             <span className="text-xs font-semibold mt-2 uppercase tracking-wide">Preview & Import</span>
           </div>
         </div>
@@ -44,10 +44,10 @@ export default function VendorCsvImportPage() {
                 <div 
                   key={source}
                   onClick={() => setImportSource(source)}
-                  className={\`border-2 rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer transition-all duration-200 \${importSource === source ? 'border-indigo-600 bg-indigo-50/50 shadow-md shadow-indigo-100' : 'border-slate-200 hover:border-indigo-300 hover:bg-slate-50'}\`}
+                  className={`border-2 rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer transition-all duration-200 ${importSource === source ? 'border-indigo-600 bg-indigo-50/50 shadow-md shadow-indigo-100' : 'border-slate-200 hover:border-indigo-300 hover:bg-slate-50'}`}
                 >
-                  <Server className={\`w-8 h-8 mb-3 \${importSource === source ? 'text-indigo-600' : 'text-slate-400'}\`} />
-                  <span className={\`font-semibold capitalize \${importSource === source ? 'text-indigo-900' : 'text-slate-600'}\`}>{source}</span>
+                  <Server className={`w-8 h-8 mb-3 ${importSource === source ? 'text-indigo-600' : 'text-slate-400'}`} />
+                  <span className={`font-semibold capitalize ${importSource === source ? 'text-indigo-900' : 'text-slate-600'}`}>{source}</span>
                 </div>
               ))}
             </div>
