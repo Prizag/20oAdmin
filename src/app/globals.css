@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 59 130 246;
+    --color-primary-dark: 37 99 235;
+    --color-secondary: 139 92 246;
+    --color-success: 16 185 129;
+    --color-warning: 245 158 11;
+    --color-danger: 239 68 68;
+    --color-info: 14 165 233;
+    
+    --color-bg-base: 248 250 252;
+    --color-bg-surface: 255 255 255;
+    --color-bg-subtle: 241 245 249;
+    --color-bg-hover: 226 232 240;
+    
+    --color-text-base: 15 23 42;
+    --color-text-muted: 100 116 139;
+    --color-text-invert: 255 255 255;
+
+    --color-border: 226 232 240;
+    --color-border-hover: 203 213 225;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased font-sans;
+  }
+}
+
+@layer components {
+  /* Premium Card (Glassmorphism + soft shadow) */
+  .card {
+    @apply bg-white border border-white/50 rounded-xl shadow-sm p-6 transition-all duration-150 ease-in hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md border border-transparent transition-all duration-150;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600 hover:shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-100 text-slate-900 border-slate-200 hover:bg-slate-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white hover:brightness-90;
+  }
+
+  /* Status Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success { @apply bg-emerald-100 text-emerald-600; }
+  .badge-warning { @apply bg-amber-100 text-amber-600; }
+  .badge-danger { @apply bg-red-100 text-red-600; }
+  .badge-info { @apply bg-sky-100 text-sky-600; }
+
+  /* Forms & Inputs */
+  .input {
+    @apply w-full px-3 py-2 text-sm border border-slate-200 rounded-md bg-white text-slate-900 transition-all focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10;
+  }
+
+  /* Tables */
+  .table-container {
+    @apply overflow-x-auto border border-slate-200 rounded-lg bg-white;
+  }
+
+  .table {
+    @apply w-full text-left text-sm border-collapse;
+  }
+
+  .table th {
+    @apply px-4 py-3 bg-slate-100 text-slate-500 font-semibold border-b border-slate-200;
+  }
+
+  .table td {
+    @apply px-4 py-3 border-b border-slate-200 text-slate-900;
+  }
+
+  .table tbody tr:hover {
+    @apply bg-slate-50;
+  }
+
+  .table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  /* Typography Helpers */
+  .text-h1 { @apply text-3xl font-bold mb-6; }
+  .text-h2 { @apply text-2xl font-semibold mb-4; }
+  .text-h3 { @apply text-xl font-semibold mb-3; }
+  .text-muted { @apply text-slate-500; }
+}
